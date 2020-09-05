@@ -1,0 +1,7 @@
+.AppHeader {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  flex-direction: row;
+}

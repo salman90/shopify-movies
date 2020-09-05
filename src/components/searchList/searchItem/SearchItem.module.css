@@ -1,0 +1,25 @@
+.searchItemContainer {
+    height: 100px;
+    background-color: green; 
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.posterStyle {
+    width: 57px;
+    height: 74px;
+    margin: 4px;
+}
+
+.titleContainer {
+    width: 200px;
+
+}
+
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+}
+

@@ -1,0 +1,21 @@
+.nominationContainer {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    /* margin-top: 0px; */
+}
+
+
+.posterContiner {
+     width: 150px;
+    height: 150px
+}
+
+.poster {
+    width: 100px;
+    height: 100px;
+}

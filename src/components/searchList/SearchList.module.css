@@ -1,0 +1,7 @@
+.searchListContainer {
+    display: flex;
+    flex: 1;
+    background-color: blue;
+    flex-direction: column;
+    overflow-y: scroll;
+}
