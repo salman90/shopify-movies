@@ -1,6 +1,12 @@
-.App {
-  background-color: red;
+.ListsContainer {
+   display: flex;
+   flex: 1;
+   flex-direction: row;
+   height: 600px;
+   /* background-color: #fbf7ed; */
+   /* margin: 10px; */
 }
 
-
-
+.App {
+  background-color: #fff;
+}

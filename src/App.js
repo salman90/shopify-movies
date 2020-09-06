@@ -6,16 +6,28 @@ import Search from './components/search';
 import SearchList from './components/searchList';
 import NominationList from './components/nomination';
 import { ToastContainer, toast } from 'react-toastify';
+import { URL, API_KEY, PARAM_TYPE } from './constants';
 import 'react-toastify/dist/ReactToastify.css';
+import { removeFromArray } from './util'
 
-
+/**
+ * @class App
+ * @extends React.PureComponent
+ * @description this a component of the all the components and it handle all the application state
+ */
 class App extends PureComponent {
-  
-
-  state = {
-    searchResult: [],
-    nominations: [],
+/**
+ * @constructor
+ * @param {object} props
+ */
+  constructor(props) {
+    super(props)
+    this.state = {
+      searchResult: [],
+      nominations: [],
+    }
   }
+
 
   componentDidMount() {
     const nominations = JSON.parse(localStorage.getItem('nominations'));
@@ -28,7 +40,7 @@ class App extends PureComponent {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot){
-    if (prevState.nominations.length != this.state.nominations.length)
+    if (prevState.nominations.length !== this.state.nominations.length)
     {
       localStorage.setItem('nominations', JSON.stringify(this.state.nominations));
     }
@@ -36,8 +48,10 @@ class App extends PureComponent {
 
 
   
-
-
+  /**
+   * @description fech information from Omdb API and sets the searchResult to data coming from the API
+   * @param {String} text - seachInput
+   */
   handleSubmitSearch = async (text) => {
    if(text.length > 0){
      this.fetchMovies(text)
@@ -49,10 +63,10 @@ class App extends PureComponent {
   }
 
   async fetchMovies(text){
-    axios.get(' http://www.omdbapi.com/?apikey=110ce11', {
+    axios.get(`${URL}apikey=${API_KEY}`, {
       params: {
         s: text,
-        type: "movie"
+        type: PARAM_TYPE
       }
     })
     .then((res) => {
@@ -68,11 +82,14 @@ class App extends PureComponent {
       }
     })
     .catch((err) => {
-      console.log(err)
       toast.error(err.toString())
     })
   }
 
+  /**
+   * @description adds a nominationItem Object to nominations array
+   * @param {Object} nominationItem
+   */
   addNominations = (nominationItem) => {
     if (this.state.nominations.some(nomination => nomination.imdbID === nominationItem.imdbID))
     {
@@ -81,31 +98,32 @@ class App extends PureComponent {
     else if (this.state.nominations.length >= 5)
     {
       toast.warn("Can't add more than five nominations")
-
     }
     else
     {
-      let searchCopy = [...this.state.searchResult];
-      this.setState({
-        nominations: [...this.state.nominations, nominationItem]
-      })
-      // this.addToLocalStorage(nominationItem)
-      toast.success(nominationItem.Title + " added to nominations list successfully")
-      // console.log(localStorage.getItem('nominations'), " nominations")
-      // localStorage.setItem('nominations', JSON.stringify(this.state.nominations))
+      const newArray = removeFromArray(nominationItem, this.state.searchResult);
+      if (newArray !== null)
+      {
+        this.setState({
+          nominations: [...this.state.nominations, nominationItem],
+          searchResult: newArray
+        });
+        toast.success(nominationItem.Title + " added to nominations list successfully");
+      }
     }
   }
 
 
-
-
+  /**
+   * @description removes a nominationItem from nomination array
+   * @param {Object} nominationItem 
+   */
   removeNomination = (nominationItem) => {
-    let copyArray = [...this.state.nominations];
-    let index = copyArray.indexOf(nominationItem);
-    if (index !== -1)
+    const newArray = removeFromArray(nominationItem, this.state.nominations);
+    
+    if (newArray !== null)
     {
-      copyArray.splice(index, 1)
-      this.setState({ nominations: copyArray });
+      this.setState({ nominations: newArray });
       toast.success("Removed " + nominationItem.Title + " from nomination list")
     }
     else
@@ -125,13 +143,7 @@ class App extends PureComponent {
           handleSubmitSearch={this.handleSubmitSearch}
         />
         <div
-         style={{
-           display: "flex",
-           flex: 1,
-           background: "geen",
-           flexDirection: "row",
-           height: 500,
-         }}
+          className={appStyles.ListsContainer}
         >
           <SearchList
             searchResult={this.state.searchResult}

@@ -1,7 +1,21 @@
 .searchListContainer {
     display: flex;
     flex: 1;
-    background-color: blue;
+    /* background-color: #fff; */
+    /* height: 450px; */
     flex-direction: column;
     overflow-y: scroll;
+    margin-right: 10px  ;
+    /* align-items: center; */
+    background-color: #fbf7ed;
+
+}
+
+.searchTitle {
+    text-align: 'center';
+    font-family: Helvetica, Arial;
+    font-weight: bold;
+    line-height: 1.5;
+     border-bottom: 4px solid #000;
+     margin-right: 4px;
 }

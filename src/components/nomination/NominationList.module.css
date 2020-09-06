@@ -1,9 +1,32 @@
 .nominationContainer {
     flex: 2;
-    background-color: white;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+       background-color: #fbf7ed;
+
+    /* flex-wrap: wrap; */
+    /* align-content: flex-start; */
+}
+
+.nominationListTitleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        /* background-color: seagreen; */
+    height: 40px;
+    border-bottom: 4px solid #000;
+
+}
+
+.nominationTitle {
+    font-family: Helvetica, Arial;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.nominationItemContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: flex-start;
-    /* justify-content: space-around; */
 }

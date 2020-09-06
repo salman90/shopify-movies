@@ -1,21 +1,49 @@
 .nominationContainer {
-    width: 200px;
-    height: 200px;
-    background-color: black;
+    width: 250px;
+    height: 260px;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    /* flex-wrap: wrap; */
+    border-style: solid;    
+    border-width: 1px;
+    border-color: #212326;
     margin: 5px;
-    /* margin-top: 0px; */
+    border-radius: 3px;
 }
 
 
 .posterContiner {
-     width: 150px;
+     width: 200px;
     height: 150px
 }
 
 .poster {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
+}
+.nominationTitle {
+    margin-left: 4px;
+}
+
+.buttonStyle {
+     width: 100px;
+    height: 35px; 
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    cursor: pointer;
+    border-color: transparent;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+    background-color: #212326;
+    font-weight: 700;
+    font-size: 1em;  
+}
+
+.buttonStyle:hover {
+    background-color: #008060;
 }
