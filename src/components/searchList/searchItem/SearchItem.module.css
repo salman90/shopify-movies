@@ -1,5 +1,6 @@
 .searchItemContainer {
     height: 100px;
+    min-height: 100px;
     background-color: #008060; 
     margin: 5px;
     display: flex;
