@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import SearchItem from './searchItem';
+import Spinner from '../../components/spinner';
 import styles from './SearchList.module.css';
 
 
@@ -29,16 +30,30 @@ class SearchList extends PureComponent {
                     />
             )
         })
-    )
+    )   
+
+    /**
+     * 
+     */
+    renderLoading = () => {
+        if(!this.props.loading)
+        {
+            return null;
+        }
+        else
+        {
+            return (<Spinner />)
+        }
+    }
 
     render() {
-        return(
+        return( 
             <div className={styles.searchListContainer}>
                 <p className={styles.searchTitle} style={{textAlign: 'center'}}>Search Results</p>
                 {this.props.searchResult.length > 0 ? 
                   this.renderSearchItem(this.props.searchResult)
                   :
-                  null
+                 this.renderLoading()
                  }
             </div>
         )

@@ -36,14 +36,19 @@ class NominationList extends PureComponent {
     render(){
         return(
             <div className={styles.nominationContainer}> 
-                <div
-                    className={styles.nominationListTitleContainer}
-                >
+                <div className={styles.nominationListTitleContainer}>
                     <p className={styles.nominationTitle}>Nominations</p>
                 </div>
-                <div className={styles.nominationItemContainer  }>
+                {
+                    this.props.nominations && this.props.nominations.length >= 5?
+                        <p className={styles.nominationTitle}>You have Five Nominations</p>
+                    :
+                    null
+                }
+                <div className={styles.nominationItemContainer}>
+                    
                     {
-                        this.props.nominations.length > 0 ?
+                        this.props.nominations &&this.props.nominations.length > 0 ?
                             this.renderNominationItem(this.props.nominations)
                             :
                             null

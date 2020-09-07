@@ -9,7 +9,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import { URL, API_KEY, PARAM_TYPE } from './constants';
 import 'react-toastify/dist/ReactToastify.css';
 import { removeFromArray } from './util';
-import ReactCSSTransitionGroup from 'react-transition-group'; // ES6
 
 
 /**
@@ -27,6 +26,7 @@ class App extends PureComponent {
     this.state = {
       searchResult: [],
       nominations: [],
+      loading: false,
     }
   }
 
@@ -56,6 +56,9 @@ class App extends PureComponent {
    */
   handleSubmitSearch = async (text) => {
    if(text.length > 0){
+     this.setState({
+       loading: true,
+     })
      this.fetchMovies(text)
    }
    else
@@ -65,6 +68,7 @@ class App extends PureComponent {
   }
 
   async fetchMovies(text){
+    
     axios.get(`${URL}apikey=${API_KEY}`, {
       params: {
         s: text,
@@ -75,8 +79,9 @@ class App extends PureComponent {
       if (res.data.Response === "True")
       {
         this.setState({
-          searchResult: res.data.Search
-        })
+          searchResult: res.data.Search,
+          loading: false,
+        });
       }
       else
       {
@@ -84,6 +89,9 @@ class App extends PureComponent {
       }
     })
     .catch((err) => {
+      this.setState({
+        loading: false,
+      });
       toast.error(err.toString())
     })
   }
@@ -138,20 +146,19 @@ class App extends PureComponent {
 
 
   render(){
-    console.log(window.innerWidth, " width")
+    console.log(this.state.loading, " loading")
     return (
       <div className={appStyles.App}>
         <Header />
         <Search
           handleSubmitSearch={this.handleSubmitSearch}
         />
-        <div
-          className={appStyles.ListsContainer}
-        >
-          <SearchList
-            searchResult={this.state.searchResult}
-            handelNomination={this.addNominations}
-          />
+        <div className={appStyles.ListsContainer}>
+            <SearchList
+              searchResult={this.state.searchResult}
+              handelNomination={this.addNominations}
+              loading={this.state.loading}
+            />
           <NominationList
             nominations={this.state.nominations} 
             removeNomination={this.removeNomination}
