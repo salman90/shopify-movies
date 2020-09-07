@@ -1,6 +1,6 @@
 .nominationContainer {
     width: 250px;
-    height: 260px;
+    height: 280px;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -47,21 +47,11 @@
     background-color: #008060;
 }
 
-.example-enter {
-    opacity: 0.01;
+.titleContainer {
+   margin-top: 0px;
+   max-height: 100px;
+    white-space: pre-wrap;
 }
 
-.example-enter.example-enter-active {
-    opacity: 1;
-    transition: opacity 300ms ease-in;
-}
 
-.example-leave {
-    opacity: 1;
-}
-
-.example-leave.example-leave-active {
-    opacity: 0.01;
-    transition: opacity 300ms ease-in;
-}
 

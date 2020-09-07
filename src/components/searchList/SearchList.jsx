@@ -49,7 +49,7 @@ class SearchList extends PureComponent {
     render() {
         return( 
             <div className={styles.searchListContainer}>
-                <p className={styles.searchTitle} style={{textAlign: 'center'}}>Search Results</p>
+                <p className={styles.searchTitle}>Search Results</p>
                 {this.props.searchResult.length > 0 ? 
                   this.renderSearchItem(this.props.searchResult)
                   :

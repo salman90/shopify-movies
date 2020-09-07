@@ -43,3 +43,7 @@
     font-size: 1em;  
 }
 
+.buttonStyle:hover {
+    background-color: #b9d382;
+}
+

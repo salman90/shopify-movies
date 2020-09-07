@@ -1,14 +1,13 @@
 import React, { PureComponent } from 'react';
-import axios from 'axios';
 import appStyles from './App.module.css';
 import Header from './components/header';
 import Search from './components/search';
 import SearchList from './components/searchList';
 import NominationList from './components/nomination';
 import { ToastContainer, toast } from 'react-toastify';
-import { URL, API_KEY, PARAM_TYPE } from './constants';
+import { fetchMoviesNew } from './actions/apiService';
 import 'react-toastify/dist/ReactToastify.css';
-import { removeFromArray } from './util';
+import { removeFromArray } from './util/util';
 
 
 /**
@@ -59,7 +58,21 @@ class App extends PureComponent {
      this.setState({
        loading: true,
      })
-     this.fetchMovies(text)
+    try {
+      const fecthData = await fetchMoviesNew(text);
+      this.setState({
+        searchResult: fecthData,
+        loading: false,
+      });
+
+     }catch(err) {
+
+      this.setState({
+        loading: false,
+      });
+
+      toast.error(err.toString())
+    }
    }
    else
    {
@@ -67,34 +80,7 @@ class App extends PureComponent {
    }
   }
 
-  async fetchMovies(text){
-    
-    axios.get(`${URL}apikey=${API_KEY}`, {
-      params: {
-        s: text,
-        type: PARAM_TYPE
-      }
-    })
-    .then((res) => {
-      if (res.data.Response === "True")
-      {
-        this.setState({
-          searchResult: res.data.Search,
-          loading: false,
-        });
-      }
-      else
-      {
-        throw new Error(res.data.Error);
-      }
-    })
-    .catch((err) => {
-      this.setState({
-        loading: false,
-      });
-      toast.error(err.toString())
-    })
-  }
+  
 
   /**
    * @description adds a nominationItem Object to nominations array

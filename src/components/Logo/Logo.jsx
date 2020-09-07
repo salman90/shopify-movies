@@ -1,17 +1,9 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 
-class Logo extends PureComponent {
-    
-    render(){
-        console.log(this.props.src)
-        const styles = {
-            width: this.props.width,
-            height: this.props.height
-        }
-        return (
-            <img  src={this.props.src} style={styles}/>
-        )
-    }
+
+const Logo = (props) => {
+    return <img src={props.src} alt={"shopify logo"} style={{width: props.width, height: props.height}} />
 }
+
 
 export default Logo;

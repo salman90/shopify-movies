@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
-import styles from './Nomination.module.css';
-import HighlightOffIcon from '@material-ui/icons/HighlightOff';
-
+import styles from './NominationItem.module.css';
+import placeHolderImage from '../../../images/movie_placeholder.png'
 
 /**
  * @class NominationItem
@@ -16,12 +15,13 @@ class NominationItem extends PureComponent {
     }
     render(){
         console.log(this.props.nomination)
+        
         return(
             <div className={styles.nominationContainer}>
                 <div>
-                    <img className={styles.poster} src={this.props.nomination.Poster} />
+                    <img className={styles.poster} alt={"movie poster"} src={this.props.nomination.Poster !== "N/A" ? this.props.nomination.Poster : placeHolderImage} />
                 </div>
-                <div>
+                <div className={styles.titleContainer}>
                     <h4 className={styles.nominationTitle}>{this.props.nomination.Title} <span> ({this.props.nomination.Year})</span> </h4>
                 </div>
                 <div>
