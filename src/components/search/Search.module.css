@@ -3,18 +3,41 @@
     background-color: #fff;
 }
 
+@media (max-width: 790px) {
+    .searchContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
 .formStyle {
     display: flex;
     height: 100px;
-    /* align-items: center; */
     justify-content: center;
     align-items: center;
     
 }
 
+@media (max-width: 790px) {
+     .formStyle {
+         flex-direction: column;
+     }
+     
+}
+
 .textInput {
     width: 600px;
     margin: 5px;
+    margin-top: 10px;
+}
+
+@media (max-width: 790px) {
+    .textInput {
+        width: 300px;
+    };
 }
 
 .buttonStyle {
@@ -31,12 +54,11 @@
     background-color: #008060;
     font-weight: 700;
     font-size: 1em;  
-    /* padding: 0px;
-    margin: 0px;
-    border: 0px; */
+   
 }
-.buttonStyle:hover {
-    text-decoration: none;
-    background-color:#108043;
 
-}
+.buttonStyle:hover {
+        text-decoration: none;
+        background-color:#108043;
+
+    }

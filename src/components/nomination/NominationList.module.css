@@ -1,19 +1,16 @@
 .nominationContainer {
     flex: 2;
-    /* background-color: white; */
     display: flex;
     flex-direction: column;
-       background-color: #fbf7ed;
-
-    /* flex-wrap: wrap; */
-    /* align-content: flex-start; */
+    background-color: #fff;
 }
+
+
 
 .nominationListTitleContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-        /* background-color: seagreen; */
     height: 40px;
     border-bottom: 4px solid #000;
 
@@ -29,4 +26,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    
+}
+
+@media (max-width: 790px) {
+    .nominationItemContainer {
+        align-items: center;
+        justify-content: center;
+    }
 }

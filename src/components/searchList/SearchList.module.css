@@ -1,14 +1,18 @@
 .searchListContainer {
     display: flex;
     flex: 1;
-    /* background-color: #fff; */
-    /* height: 450px; */
+    height: 600px;
     flex-direction: column;
     overflow-y: scroll;
-    margin-right: 10px  ;
-    /* align-items: center; */
-    background-color: #fbf7ed;
+     margin-right: 10px;
+    background-color: #fff;
 
+}
+
+@media(max-width: 790px) { 
+    .searchListContainer {
+         margin-right: 0px;
+    }
 }
 
 .searchTitle {

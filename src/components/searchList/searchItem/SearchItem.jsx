@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import styles from './SearchItem.module.css';
 
 
+
 class SearchItem extends PureComponent {
     /**
      * @param {Object} e

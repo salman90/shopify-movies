@@ -8,7 +8,9 @@ import NominationList from './components/nomination';
 import { ToastContainer, toast } from 'react-toastify';
 import { URL, API_KEY, PARAM_TYPE } from './constants';
 import 'react-toastify/dist/ReactToastify.css';
-import { removeFromArray } from './util'
+import { removeFromArray } from './util';
+import ReactCSSTransitionGroup from 'react-transition-group'; // ES6
+
 
 /**
  * @class App
@@ -136,6 +138,7 @@ class App extends PureComponent {
 
 
   render(){
+    console.log(window.innerWidth, " width")
     return (
       <div className={appStyles.App}>
         <Header />

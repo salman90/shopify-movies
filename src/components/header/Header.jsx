@@ -18,7 +18,7 @@ class Header extends PureComponent {
                         width={56}
                         height={56}
                     />
-                    <p className={styles.logoText}>shopify<span className={styles.spantext}>Movies</span></p>
+                    <p className={styles.logoText}>shopify<span className={styles.spantext}>movies</span></p>
                 </div>
 
                 

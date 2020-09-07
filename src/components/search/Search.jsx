@@ -60,7 +60,8 @@ class Search extends PureComponent {
                     <TextField id="input-with-icon-textfield" 
                                 variant="outlined"
                                 className={styles.textInput} 
-                                value={this.state.text} 
+                                value={this.state.text}
+                                autoFocus={false} 
                                 onChange={this.handleTextChange}
                                 InputProps={{
                                     startAdornment: (

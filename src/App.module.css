@@ -1,12 +1,19 @@
+.App {
+  background-color: #fff;
+}
+
+
 .ListsContainer {
    display: flex;
    flex: 1;
    flex-direction: row;
-   height: 600px;
-   /* background-color: #fbf7ed; */
-   /* margin: 10px; */
 }
 
-.App {
-  background-color: #fff;
+@media (max-width: 790px) {
+  .ListsContainer{
+    flex-direction: column
+  }
 }
+
+
+

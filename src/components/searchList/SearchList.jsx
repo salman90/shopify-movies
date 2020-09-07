@@ -22,11 +22,11 @@ class SearchList extends PureComponent {
     renderSearchItem = (searchItems) => (
         searchItems.map((searchItemDetails) => {
             return (
-                <SearchItem
-                    key={searchItemDetails.imdbID}
-                    searchItemDetails={searchItemDetails}
-                    handelNomination={this.handelNomination}
-                />
+                    <SearchItem
+                        key={searchItemDetails.imdbID}
+                        searchItemDetails={searchItemDetails}
+                        handelNomination={this.handelNomination}
+                    />
             )
         })
     )
