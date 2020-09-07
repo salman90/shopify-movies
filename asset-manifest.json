@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/shopify-movie/static/css/main.6503cd60.chunk.css",
-    "main.js": "/shopify-movie/static/js/main.b5663b0a.chunk.js",
-    "main.js.map": "/shopify-movie/static/js/main.b5663b0a.chunk.js.map",
-    "runtime-main.js": "/shopify-movie/static/js/runtime-main.25c0057d.js",
-    "runtime-main.js.map": "/shopify-movie/static/js/runtime-main.25c0057d.js.map",
-    "static/css/2.d34346ea.chunk.css": "/shopify-movie/static/css/2.d34346ea.chunk.css",
-    "static/js/2.23cfb983.chunk.js": "/shopify-movie/static/js/2.23cfb983.chunk.js",
-    "static/js/2.23cfb983.chunk.js.map": "/shopify-movie/static/js/2.23cfb983.chunk.js.map",
-    "index.html": "/shopify-movie/index.html",
-    "precache-manifest.d57983263267127770133eb27e2b7742.js": "/shopify-movie/precache-manifest.d57983263267127770133eb27e2b7742.js",
-    "service-worker.js": "/shopify-movie/service-worker.js",
-    "static/css/2.d34346ea.chunk.css.map": "/shopify-movie/static/css/2.d34346ea.chunk.css.map",
-    "static/css/main.6503cd60.chunk.css.map": "/shopify-movie/static/css/main.6503cd60.chunk.css.map",
-    "static/js/2.23cfb983.chunk.js.LICENSE.txt": "/shopify-movie/static/js/2.23cfb983.chunk.js.LICENSE.txt",
-    "static/media/shopifyLogo.png": "/shopify-movie/static/media/shopifyLogo.c3d52d90.png"
+    "main.css": "/shopify-movies/static/css/main.6503cd60.chunk.css",
+    "main.js": "/shopify-movies/static/js/main.81f6e677.chunk.js",
+    "main.js.map": "/shopify-movies/static/js/main.81f6e677.chunk.js.map",
+    "runtime-main.js": "/shopify-movies/static/js/runtime-main.a254662f.js",
+    "runtime-main.js.map": "/shopify-movies/static/js/runtime-main.a254662f.js.map",
+    "static/css/2.d34346ea.chunk.css": "/shopify-movies/static/css/2.d34346ea.chunk.css",
+    "static/js/2.23cfb983.chunk.js": "/shopify-movies/static/js/2.23cfb983.chunk.js",
+    "static/js/2.23cfb983.chunk.js.map": "/shopify-movies/static/js/2.23cfb983.chunk.js.map",
+    "index.html": "/shopify-movies/index.html",
+    "precache-manifest.c232a9ef7845c216ffc4e3423565dd04.js": "/shopify-movies/precache-manifest.c232a9ef7845c216ffc4e3423565dd04.js",
+    "service-worker.js": "/shopify-movies/service-worker.js",
+    "static/css/2.d34346ea.chunk.css.map": "/shopify-movies/static/css/2.d34346ea.chunk.css.map",
+    "static/css/main.6503cd60.chunk.css.map": "/shopify-movies/static/css/main.6503cd60.chunk.css.map",
+    "static/js/2.23cfb983.chunk.js.LICENSE.txt": "/shopify-movies/static/js/2.23cfb983.chunk.js.LICENSE.txt",
+    "static/media/shopifyLogo.png": "/shopify-movies/static/media/shopifyLogo.c3d52d90.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.25c0057d.js",
+    "static/js/runtime-main.a254662f.js",
     "static/css/2.d34346ea.chunk.css",
     "static/js/2.23cfb983.chunk.js",
     "static/css/main.6503cd60.chunk.css",
-    "static/js/main.b5663b0a.chunk.js"
+    "static/js/main.81f6e677.chunk.js"
   ]
 }
