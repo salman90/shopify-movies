@@ -60,13 +60,14 @@ class App extends PureComponent {
      })
     try {
       const fecthData = await fetchMoviesNew(text);
+      console.log(" in try")
       this.setState({
         searchResult: fecthData,
         loading: false,
       });
 
      }catch(err) {
-
+       console.log("in catch")
       this.setState({
         loading: false,
       });
