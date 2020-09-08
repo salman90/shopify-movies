@@ -13,9 +13,7 @@ class NominationItem extends PureComponent {
         e.preventDefault();
         this.props.removeNomination(this.props.nomination)
     }
-    render(){
-        console.log(this.props.nomination)
-        
+    render(){        
         return(
             <div className={styles.nominationContainer}>
                 <div>

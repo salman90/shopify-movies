@@ -43,7 +43,7 @@ class NominationList extends PureComponent {
                     this.props.nominations && this.props.nominations.length >= 5?
                         <p className={styles.nominationTitle}>You have Five Nominations</p>
                     :
-                    null
+                        <div className={styles.nominationContainerTitle}></div>
                 }
                 <div className={styles.nominationItemContainer}>
                     

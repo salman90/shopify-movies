@@ -3,7 +3,7 @@ import appStyles from './App.module.css';
 import Header from './components/header';
 import Search from './components/search';
 import SearchList from './components/searchList';
-import NominationList from './components/nomination';
+import NominationList from './components/nominationList';
 import { ToastContainer, toast } from 'react-toastify';
 import { fetchMoviesNew } from './actions/apiService';
 import 'react-toastify/dist/ReactToastify.css';
@@ -133,7 +133,6 @@ class App extends PureComponent {
 
 
   render(){
-    console.log(this.state.loading, " loading")
     return (
       <div className={appStyles.App}>
         <Header />

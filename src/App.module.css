@@ -7,11 +7,15 @@
    display: flex;
    flex: 1;
    flex-direction: row;
+   /* height: 705px; */
 }
+
+
 
 @media (max-width: 790px) {
   .ListsContainer{
     flex-direction: column
+    
   }
 }
 
