@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "84dbea9c04bc5e4d35c71adbbff2d1ec",
+    "revision": "b031946988903b8e250787228bf05f06",
     "url": "/shopify-movies/index.html"
   },
   {
-    "revision": "d0438f8f86e20eb7e744",
+    "revision": "124ad742dcd3bb7f90d0",
     "url": "/shopify-movies/static/css/2.d34346ea.chunk.css"
   },
   {
-    "revision": "1133940eff5eda66c274",
-    "url": "/shopify-movies/static/css/main.bc456d7d.chunk.css"
+    "revision": "f03a4b48d0f1bfad51ab",
+    "url": "/shopify-movies/static/css/main.b355b1f6.chunk.css"
   },
   {
-    "revision": "d0438f8f86e20eb7e744",
-    "url": "/shopify-movies/static/js/2.8dc94b20.chunk.js"
+    "revision": "124ad742dcd3bb7f90d0",
+    "url": "/shopify-movies/static/js/2.b9fd3c69.chunk.js"
   },
   {
     "revision": "5e9b6f5c16b720e8a86875f97734673e",
-    "url": "/shopify-movies/static/js/2.8dc94b20.chunk.js.LICENSE.txt"
+    "url": "/shopify-movies/static/js/2.b9fd3c69.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1133940eff5eda66c274",
-    "url": "/shopify-movies/static/js/main.1ab345ff.chunk.js"
+    "revision": "f03a4b48d0f1bfad51ab",
+    "url": "/shopify-movies/static/js/main.e89b5244.chunk.js"
   },
   {
     "revision": "55abdd433c6c2fd68a06",
