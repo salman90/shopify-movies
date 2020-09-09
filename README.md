@@ -10,8 +10,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     `npm start`
 4. open  [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-In the project directory, you can run:
-
 ## Website on github
 To view project please visit [Shopfiy movies](https://salman90.github.io/shopify-movies/)
 
