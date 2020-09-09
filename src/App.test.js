@@ -7,15 +7,6 @@ import App from './App';
 import Search from './components/search';
 import SearchList from './components/searchList'
 
-// test('renders learn react link', () => {
-//   const { getByText } = render(<App />);
-//   const linkElement = getByText(/learn react/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
-
-
-// test
-
 
 describe('App', () => {
   

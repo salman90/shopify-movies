@@ -13,7 +13,6 @@
 
 .posterContiner {
     display: flex;
-     /* width: 250px;  */
     flex: 2;
     justify-content: center;
 
@@ -25,7 +24,6 @@
 }
 .nominationTitle {
     margin-left: 4px;
-     /* word-wrap: break-word; */
 }
 
 .buttonContainer {
