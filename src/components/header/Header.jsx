@@ -3,8 +3,11 @@ import styles from './Header.module.css';
 import Logo from '../Logo'
 import imageSrc from '../../images/shopifyLogo.png';
 
-
-const Header = (props) => {
+/**
+ * @deprecated functional React component Header
+ * @returns Header functional React component
+ */
+const Header = () => {
     return (
         <header className={styles.AppHeader}>
             <div className={styles.LogoContainer}>
