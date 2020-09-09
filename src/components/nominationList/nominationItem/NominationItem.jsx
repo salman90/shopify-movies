@@ -13,16 +13,22 @@ class NominationItem extends PureComponent {
         e.preventDefault();
         this.props.removeNomination(this.props.nomination)
     }
-    render(){        
+    render(){    
+        let truncateText = ''
+        if (this.props.nomination.Title.length >= 97 ){
+             truncateText = this.props.nomination.Title.slice(0, 97) + "..."
+        }else{
+             truncateText = this.props.nomination.Title
+        }        
         return(
             <div className={styles.nominationContainer}>
-                <div>
+                <div className={styles.posterContiner}>
                     <img className={styles.poster} alt={"movie poster"} src={this.props.nomination.Poster !== "N/A" ? this.props.nomination.Poster : placeHolderImage} />
                 </div>
                 <div className={styles.titleContainer}>
-                    <h4 className={styles.nominationTitle}>{this.props.nomination.Title} <span> ({this.props.nomination.Year})</span> </h4>
+                    <h4 className={styles.nominationTitle}> {truncateText} <span> ({this.props.nomination.Year})</span> </h4>
                 </div>
-                <div>
+                <div className={styles.buttonContainer}>
                     <button className={styles.buttonStyle} onClick={this.handleRemoveNomination}>
                         Remove 
                     </button>
