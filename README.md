@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## installation
+## Installation
 1. Clone repository with git:
     `git clone https://github.com/salman90/shopify-movies.git`
      `cd shopify-movies`
